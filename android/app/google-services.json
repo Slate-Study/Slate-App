@@ -1,0 +1,190 @@
+{
+  "project_info": {
+    "project_number": "584274548867",
+    "project_id": "project-leazn-dev",
+    "storage_bucket": "project-leazn-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584274548867:android:3603b495f93f0d909563b6",
+        "android_client_info": {
+          "package_name": "com.appstudio.slate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584274548867-4pocrb852h6nhcf3gel5inj3250nrn0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appstudio.slate",
+            "certificate_hash": "0f6c462cbcc7d3c0584b3e2935069aeab4dc2ebe"
+          }
+        },
+        {
+          "client_id": "584274548867-b5kfio1r8o9vlk5rremnjbpop0ssset0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appstudio.slate",
+            "certificate_hash": "d2ebca464c670897b9df4079485d3d43a927ff47"
+          }
+        },
+        {
+          "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCutEP9fp2o6Rwl_X9J-wGZZKMNE9k0V-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584274548867:android:b9e3b5bb86c0eae29563b6",
+        "android_client_info": {
+          "package_name": "com.appstudio.slate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584274548867-1927auql5vs930r36hvv8n92q00tkkg6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appstudio.slate",
+            "certificate_hash": "0f6c462cbcc7d3c0584b3e2935069aeab4dc2ebe"
+          }
+        },
+        {
+          "client_id": "584274548867-gvj86gbrpuc7jjc48me462mffuornbat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appstudio.slate",
+            "certificate_hash": "d2ebca464c670897b9df4079485d3d43a927ff47"
+          }
+        },
+        {
+          "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCutEP9fp2o6Rwl_X9J-wGZZKMNE9k0V-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584274548867:android:a5f00897dc9b56b99563b6",
+        "android_client_info": {
+          "package_name": "com.monksappstudio.leazn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584274548867-ns1die5pfk4f1df7kvqleequgoo66mp6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monksappstudio.leazn",
+            "certificate_hash": "0f6c462cbcc7d3c0584b3e2935069aeab4dc2ebe"
+          }
+        },
+        {
+          "client_id": "584274548867-qss7q7t10qsolhb1p9sds5nvkb5fuos2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monksappstudio.leazn",
+            "certificate_hash": "d2ebca464c670897b9df4079485d3d43a927ff47"
+          }
+        },
+        {
+          "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCutEP9fp2o6Rwl_X9J-wGZZKMNE9k0V-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584274548867:android:3f104da13ef482fd9563b6",
+        "android_client_info": {
+          "package_name": "com.monksappstudio.leazn_teach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584274548867-7hhnq6ssdsp5kb9910448c1vi66jvl3r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monksappstudio.leazn_teach",
+            "certificate_hash": "0f6c462cbcc7d3c0584b3e2935069aeab4dc2ebe"
+          }
+        },
+        {
+          "client_id": "584274548867-u9etgvsfkf4d2o1khiqkglqvknmk8uo8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monksappstudio.leazn_teach",
+            "certificate_hash": "d2ebca464c670897b9df4079485d3d43a927ff47"
+          }
+        },
+        {
+          "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCutEP9fp2o6Rwl_X9J-wGZZKMNE9k0V-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584274548867-ruhe6iakht7nmhv3c75o1ekst9d7p4ms.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
