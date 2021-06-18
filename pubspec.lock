@@ -278,14 +278,14 @@ packages:
       name: flutter_local_notifications
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.0+4"
+    version: "6.0.0"
   flutter_local_notifications_platform_interface:
     dependency: transitive
     description:
       name: flutter_local_notifications_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0"
+    version: "4.0.0"
   flutter_pdfview:
     dependency: transitive
     description:
@@ -359,6 +359,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.17.0"
+  ionicons:
+    dependency: "direct main"
+    description:
+      name: ionicons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   js:
     dependency: transitive
     description:
@@ -366,6 +373,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
+  keyboard_visibility:
+    dependency: transitive
+    description:
+      name: keyboard_visibility
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.6"
   matcher:
     dependency: transitive
     description:
@@ -488,7 +502,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: cc8fe69fb89aa2fd7d375487d9fa70d3d406b690
+      resolved-ref: "43eee3c545a786f10335e8596928a5e3077b266a"
       url: "https://github.com/Slate-Study/slate_constants.git"
     source: git
     version: "0.0.1"
@@ -497,7 +511,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "0f665f93af54db1c4c013eafee6b4d9a352993f7"
+      resolved-ref: e67e0638f4aa30bb03f8d2bf2b6d56ae5d97f361
       url: "https://github.com/Slate-Study/slate_data.git"
     source: git
     version: "0.0.1"
@@ -506,7 +520,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "194b396a750c166faeba674d0c204abcc304be02"
+      resolved-ref: "51510b68edba612e1f9e1ff506263f8f809c15e5"
       url: "https://github.com/Slate-Study/slate_element_models.git"
     source: git
     version: "0.0.1"
@@ -524,7 +538,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "3bc67df2e0bb6f428069f2ac524d0fe04cffc7c4"
+      resolved-ref: "04de5a9b7950ae3af2d88828c3bb6d29f76f1da7"
       url: "https://github.com/Slate-Study/slate_file_services.git"
     source: git
     version: "0.0.1"
@@ -551,8 +565,17 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "451998c230b7a5ab02619ddaf77cdcbf7bb0cefb"
+      resolved-ref: f2841f24ab79261321e2407a212e7289d5e98fe5
       url: "https://github.com/Slate-Study/slate_ui_elements.git"
+    source: git
+    version: "0.0.1"
+  slate_ui_features:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: main
+      resolved-ref: "4e52ee093eabd3dc1d33eb1a2af6b22090b691ec"
+      url: "https://github.com/Slate-Study/slate_ui_features.git"
     source: git
     version: "0.0.1"
   source_span:
@@ -711,4 +734,4 @@ packages:
     version: "5.1.1"
 sdks:
   dart: ">=2.12.0 <3.0.0"
-  flutter: ">=2.0.0"
+  flutter: ">=2.2.0"

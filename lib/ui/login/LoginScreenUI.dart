@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'package:keyboard_visibility/keyboard_visibility.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,6 +22,22 @@ class _LoginUI extends State<LoginUI>{
   TextEditingController password = TextEditingController();
   String _email = "";
   String _password = "";
+
+  final emailFocusNode = FocusNode();
+  final pwdFocusNode = FocusNode();
+
+  @override
+  void initState(){
+    super.initState();
+    KeyboardVisibilityNotification().addNewListener(
+        onChange: (bool isVisible){
+          if (!isVisible)
+          {
+            emailFocusNode.unfocus();
+            pwdFocusNode.unfocus();
+          }
+        });
+  }
 
 
   Widget loginUi(BuildContext context){
@@ -80,6 +98,7 @@ class _LoginUI extends State<LoginUI>{
                     width: W(65) , height: H(9),
                     child: CupertinoTextField(
                       keyboardType: TextInputType.emailAddress,
+                      focusNode: emailFocusNode,
                       controller: email,
                       placeholder: "email",
                     ))
@@ -106,6 +125,7 @@ class _LoginUI extends State<LoginUI>{
                     child: CupertinoTextField(
                       obscureText: true,
                       keyboardType: TextInputType.visiblePassword,
+                      focusNode: pwdFocusNode,
                       controller: password,
                       placeholder: "password",
                     ))

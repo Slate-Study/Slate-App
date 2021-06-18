@@ -8,7 +8,6 @@ import 'package:slate_notifications/slate_notifications.dart';
 
 import 'package:slate/ui/login/LoginScreenUI.dart';
 import 'package:slate/ui/student ui/StudentHomeUI.dart';
-//import 'package:slate/ui/teacher ui/TeacherHomeUI.dart';
 import 'package:slate/ui/teacher ui/TeacherHomeUI.dart';
 
 import 'package:slate/globals/globals.dart' as glb;

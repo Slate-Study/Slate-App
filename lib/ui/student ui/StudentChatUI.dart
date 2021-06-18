@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:flushbar/flushbar.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import 'package:slate_constants/slate_constants.dart';
 import 'package:slate_entity_models/slate_entity_models.dart';
-import 'package:slate_element_models/slate_element_models.dart';
-import 'package:slate_data/slate_data.dart';
-import 'package:slate_ui_elements/slate_ui_elements.dart';
+import 'package:slate_ui_features/slate_ui_features.dart';
 
 import 'package:slate/globals/globals.dart' as glb;
 
@@ -20,129 +15,32 @@ class StudentChatUI extends StatefulWidget{
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _StudentChatUI();
   }
 }
 
 class _StudentChatUI extends State<StudentChatUI>{
 
-  TextEditingController newMessage = new TextEditingController();
-
   Widget chatUI (BuildContext context , ClassRoom classRoom) {
 
     return Padding( padding: EdgeInsets.only(left: W(3) , right: W(3)),
       child: Column(children: [
 
-        Expanded(child: ListView(
-          padding: EdgeInsets.only(bottom: H(3) , top: H(5)),
-          reverse: true,
-          children: [
-            chatStream(context, classRoom)
-          ],
-        )),
+        ChatMessages_UI(classRoom: classRoom, schoolID: glb.student.schoolID, userID: glb.student.studentUid),
 
-        ClipRRect(
-            borderRadius: BorderRadius.circular(W(2)),
-            child: Container(
-              margin: EdgeInsets.only(left: W(0.5), right: W(0.5) , bottom: H(2.5) , top: H(2)),
-              decoration: writeDecoration,
-              child: newMessages(context , classRoom),
-            )
-        ),
+        ChatNewMessages(classRoom: classRoom, schoolID: glb.student.schoolID,
+          userID: glb.student.studentUid, name: glb.student.name),
 
       ],),
     );
   }
 
-  Widget chatStream(BuildContext context , ClassRoom classRoom)
-  {
-    return StreamBuilder(
-      stream: messageStream(context, classRoom, glb.student.schoolID),
-      builder: (context , snapshot){
-        if (!snapshot.hasData || snapshot.data == null)
-        {
-          return CupertinoActivityIndicator();
-        }
-        if(snapshot.data.docs.length == 0)
-        {
-          return Center(
-              child: Text("Send your first message" ,
-                style: GoogleFonts.varelaRound(color: CupertinoColors.inactiveGray),));
-        }
-        return ListView.builder(
-          itemCount: snapshot.data.docs.length,
-          physics: phy, scrollDirection: ax, shrinkWrap: swrap,
-          itemBuilder: (BuildContext context, index) {
-
-            Message m1 = Message(snapshot.data.docs[index] , glb.student.studentUid);
-            return chatMessageBubble(context, m1);
-
-            },);
-      },);
+  Widget tagDropDown (BuildContext context, ClassRoom classRoom){
+    return Container();
   }
-
-
-  Widget newMessages(BuildContext context , ClassRoom classRoom){
-
-    return Row(children: [
-
-      Padding(padding: EdgeInsets.only(left: W(5) , right: W(2) , top: H(2) , bottom: H(2) ),
-        child: Container(
-          width: W(70),
-          decoration: BoxDecoration(border: Border.all(color: Color(0xd91a233a) , width: W(0.2)),
-              borderRadius: BorderRadius.circular(W(1))),
-          child: CupertinoTextField(
-            maxLines: null,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(W(4))),
-            controller: newMessage,
-            placeholder: "Message  # ${classRoom.className}",
-          ),
-        ),
-      ),
-
-      Material(
-        color: CupertinoColors.white,
-        child: IconButton(
-            padding: EdgeInsets.zero, color: CupertinoColors.activeBlue, iconSize: W(8), icon: Icon(Icons.send_rounded),
-            onPressed: (){
-              onSendPressed(context,classRoom);
-            }
-        ),
-      )
-    ],);
-  }
-
-  void onSendPressed(BuildContext context , ClassRoom classRoom) {
-    String _newMessage = newMessage.text;
-    if(_newMessage.isNotEmpty && _newMessage != "" && _newMessage != null)
-    {
-      sendMessage(context, _newMessage , classRoom);
-      setState(() {
-        newMessage.clear();
-        _newMessage = "";
-      });
-    }
-    else
-    {
-      Flushbar(
-        message: "Empty message",
-        duration:  Duration(seconds: 1),
-        icon: Icon(CupertinoIcons.textbox),
-      )..show(context);
-    }
-  }
-
-  void sendMessage ( BuildContext context , String mText , ClassRoom classRoom){
-    Message mNew = Message.newMessage(glb.student.studentUid , glb.student.name , mText , DateTime.now());
-    publishMessage(mNew, classRoom, glb.student.schoolID);
-  }
-
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return chatUI(context, widget.classRoom);
   }
 }

@@ -8,6 +8,7 @@ import 'package:slate_entity_models/slate_entity_models.dart';
 import 'package:slate_element_models/slate_element_models.dart';
 import 'package:slate_data/slate_data.dart';
 import 'package:slate_ui_elements/slate_ui_elements.dart';
+import 'package:slate_ui_features/slate_ui_features.dart';
 
 import 'package:slate/globals/globals.dart' as glb;
 import 'package:slate/ui/teacher ui/TeacherWorkViewUI.dart';
@@ -38,7 +39,7 @@ class _TeacherWorkUI extends State<TeacherWorkUI> {
       ],),
 
       Padding(padding: EdgeInsets.only(top: H(150) , left: W(64)) ,
-          child: newAssignment(context , classRoom))
+          child: NewWorkFeature(classRoom: classRoom, teacher: glb.teacher))
 
     ],);
   }
@@ -79,69 +80,7 @@ class _TeacherWorkUI extends State<TeacherWorkUI> {
         Navigator.push(context, CupertinoPageRoute(
             builder: (context) =>  TeacherWorkViewUI(workTeacher: workTeacher, classRoom: classRoom) ) );
       },
-
       child: workCard(context, workTeacher.work),
-    );
-  }
-
-  Widget newAssignment (BuildContext context , ClassRoom classRoom){
-
-    return FloatingActionButton.extended(
-        onPressed: () {
-          showDialog( context: context,
-              barrierDismissible: true,
-              builder: (context) => newAssignmentCreation(context , classRoom)
-          );
-        },
-        label: Text('Create', style: GoogleFonts.varelaRound(),),
-        icon: Icon(CupertinoIcons.plus_app),
-        backgroundColor: Color(0xe61a233a)
-    );
-  }
-
-  Widget newAssignmentCreation (BuildContext context , ClassRoom cr) {
-
-    TextEditingController title = TextEditingController();
-    TextEditingController content = TextEditingController();
-
-    String _title; String _content;
-
-    return AlertDialog(
-
-      title: Text("Create New Assignment" , style: GoogleFonts.varela(),),
-
-      content: Container(width: W(72) , child: Column(mainAxisSize: MainAxisSize.min ,children: [
-
-        Padding(padding: EdgeInsets.only(top: H(3) , bottom: H(3)) , child: Container(height: H(8),
-            child: CupertinoTextField( controller: title, placeholder: "Task title" ))),
-
-        Container( child: CupertinoTextField(
-          controller: content, placeholder: "Task description" , maxLines: null,
-        )),
-
-      ])),
-
-      actions: [
-        Padding(padding: EdgeInsets.only(top: H(3) , bottom: H(3)) , child: Container(height: H(8), width: W(22),
-            child: ElevatedButton(child: Text("Create" , style: GoogleFonts.varela(color: Colors.black),) ,
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>( CupertinoColors.activeBlue )),
-              onPressed: () async {
-
-                _title = title.text; _content = content.text;
-
-                if(_title != "" && _content != "")
-                {
-                  WorkTeacher nWork = WorkTeacher.createWork(_title, _content, cr.students);
-                  createWork(nWork, cr, glb.teacher);
-
-                  Navigator.of(context, rootNavigator: true).pop('dialog');
-                }
-                else
-                {
-                  Navigator.of(context, rootNavigator: true).pop('dialog');
-                }
-              },)),)
-      ],
     );
   }
 

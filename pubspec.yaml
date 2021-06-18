@@ -54,6 +54,10 @@ dependencies:
     git:
       url: https://github.com/Slate-Study/slate_ui_elements.git
       ref: main
+  slate_ui_features:
+    git:
+      url: https://github.com/Slate-Study/slate_ui_features.git
+      ref: main
 
   firebase_auth:
   firebase_messaging:
@@ -63,6 +67,7 @@ dependencies:
   file_picker:
   google_fonts:
   custom_navigation_bar:
+  ionicons:
 
 
   flutter:

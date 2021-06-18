@@ -10,7 +10,7 @@ import 'package:slate_data/slate_data.dart';
 import 'package:slate_ui_elements/slate_ui_elements.dart';
 
 import 'package:slate/globals/globals.dart' as glb;
-import 'package:slate/ui/student ui/StudentWorkViewUi.dart';
+import 'package:slate/ui/student ui/StudentWorkViewUI.dart';
 
 
 class StudentWorkUI extends StatefulWidget{
@@ -20,7 +20,7 @@ class StudentWorkUI extends StatefulWidget{
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
+    //  implement createState
     return _StudentWorkUI();
   }
 }
@@ -78,7 +78,7 @@ class _StudentWorkUI extends State<StudentWorkUI> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    //  implement build
     return workUI(context, widget.classRoom);
   }
 }
